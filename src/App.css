@@ -1,42 +1,205 @@
-#root {
-  max-width: 1280px;
+/* Estilos globales */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para la navegación */
+nav {
+  background-color: #4caf50;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+nav button {
+  background-color: white;
+  color: #4caf50;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+nav button:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+/* Contenedor de la página */
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+}
+
+.page-content {
   text-align: center;
+  margin: 20px 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Estilos para la sección del equipo (pantalla de inicio) */
+.team-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.team-member-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.team-member-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-member-card p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.team-member-card .button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  margin: 5px 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.team-member-card .button:hover {
+  background-color: #45a049;
+}
+
+/* Lista de Cards */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .card {
-  padding: 2em;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Formulario */
+form {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="url"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .team-member-card,
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card-list {
+    justify-content: center;
+  }
 }

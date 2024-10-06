@@ -1,13 +1,92 @@
-<!doctype html>
+<DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite ? React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Inicio - Equipo</title>
+  <style>
+    /* Estilos básicos */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color:#fcf5c7;
+    }
+
+    nav {
+      margin: 20px;
+    }
+
+    .button {
+      margin: 0  10px;
+      padding: 5px 5px;
+      background-color:#EE2677;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .team-member-card {
+      border: 1px solid #f694c1;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      width: 200px;
+      display: inline-block;
+    }
+
+    .team-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .image {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="root"></div>
+    <script src="main.jsx"></script>
+
+  <nav>
+    <a href="#" class="button">Inicio</a>
+    <a href="#" class="button">Lista de Cards</a>
+    <a href="#" class="button">Modificación</a>
+  </nav>
+
+  <h1>Equipo</h1>
+
+  <div class="team-section">
+    <div class="team-member-card">
+      <img src="imagenes/imagen.gisell.jpeg" alt="Gisell" class="image">
+      <p>Integrante #1</p>
+      <a href="https://github.com/juanperez" class="button" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/juanperez" class="button" target="_blank">LinkedIn</a>
+    </div>
+    
+    <div class="team-member-card">
+      <img src="imagenes/imagen.sofia.jpeg" alt="Sofia" class="image">
+      <p>Integrante #2</p>
+      <a href="https://github.com/anagomez" class="button" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/anagomez" class="button" target="_blank">LinkedIn</a>
+    </div>
+
+    <div class="team-member-card">
+      <img src="imagenes/imagen.andrea.jpeg" alt="Andrea" class="image">
+      <p>Integrante #3</p>
+      <a href="https://github.com/anagomez" class="button" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/anagomez" class="button" target="_blank">LinkedIn</a>
+    </div>
+
+
+    <!-- Agregar más tarjetas de miembros del equipo aquí -->
+  </div>
+</body>
 </html>
