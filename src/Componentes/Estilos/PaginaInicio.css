@@ -1,0 +1,55 @@
+/* Estilos para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #fcf5c7;
+  }
+  
+  /* Estilos para la barra de navegación */
+  nav {
+    border-radius: 5px;
+    margin: 20px;
+  }
+  
+  /* Botón reutilizable */
+  .boton {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #EE2677;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para la tarjeta del miembro del equipo */
+  .tarjeta-miembro-equipo {
+    border: 1px solid #f694c1;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+  }
+  
+  /* Sección del equipo */
+  .seccion-equipo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  /* Estilos para la imagen de perfil en las tarjetas */
+  .imagen {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+  
+  /* Estilos generales para los encabezados */
+  h1 {
+    color: #333;
+  }
+  
