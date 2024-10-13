@@ -1,12 +1,14 @@
-const BarraNavegacion = () => {
-    return (
-      <nav>
-        <a href="#" className="boton">Inicio</a>
-        <a href="#" className="boton">Lista de Tarjetas</a>
-        <a href="#" className="boton">Modificación</a>
-      </nav>
-    );
-  };
-  
-  export default BarraNavegacion;
-  
+import { Link } from 'react-router-dom'; 
+ 
+
+const BarraDeNavegacion = () => {
+  return (
+    <nav className="barra-navegacion">
+      <Link to="/" className="boton">Inicio</Link>
+      <Link to="/productos" className="boton">Lista de Tarjetas</Link>
+      <Link to="/agregar" className="boton">Modificación</Link>
+    </nav>
+  );
+};
+
+export default BarraDeNavegacion;
