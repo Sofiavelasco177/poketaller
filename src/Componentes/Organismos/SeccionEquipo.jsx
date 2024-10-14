@@ -1,4 +1,7 @@
 import TarjetaMiembroEquipo from '../Moleculas/TarjetaMiembroEquipo';
+import Gise from '../../../imagenes/imagengisell'
+import Sofi from '../../../imagenes/imagensofia'
+import Pau from '../../../imagenes/imagenpau'
 
 const SeccionEquipo = () => {
   return (
@@ -11,19 +14,19 @@ const SeccionEquipo = () => {
       </p>
       </div>
       <TarjetaMiembroEquipo 
-        imgSrc="imagenes/imagengisell.jpg"
+        imgSrc={Gise}
         nombre="Gise" 
         githubLink="https://github.com/Gisell0511" 
         linkedinLink="https://www.linkedin.com/in/gisell-orozco-aa7b94205/" 
       />
       <TarjetaMiembroEquipo 
-        imgSrc="imagenes/imagensofia.jpg" 
+        imgSrc={Sofi}
         nombre="Sofi" 
         githubLink="https://github.com/Sofiavelasco177" 
         linkedinLink="https://www.linkedin.com/in/sofia-velasco-0470b0333/"
       />
       <TarjetaMiembroEquipo 
-        imgSrc="imagenes/imagenandrea.jpg" 
+        imgSrc={Pau}
         nombre="Pau" 
         githubLink="https://github.com/Andrea2147" 
         linkedinLink="https://www.linkedin.com/in/paula-ochoa-5760ab333/" 
