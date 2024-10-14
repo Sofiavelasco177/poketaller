@@ -2,7 +2,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('../imagenes/background.jpg');
+  background-image: url('../src/Componentes/Img/background.jpg');
   line-height: 1.6; 
 }
 

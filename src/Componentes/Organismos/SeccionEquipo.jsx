@@ -1,7 +1,7 @@
 import TarjetaMiembroEquipo from '../Moleculas/TarjetaMiembroEquipo';
-import Gise from '../../../imagenes/imagengisell'
-import Sofi from '../../../imagenes/imagensofia'
-import Pau from '../../../imagenes/imagenpau'
+import Gise from '../Img/gisell.png';
+import Sofi from '../Img/sofia.png';
+import Pau from '../Img/pau.png';
 
 const SeccionEquipo = () => {
   return (
