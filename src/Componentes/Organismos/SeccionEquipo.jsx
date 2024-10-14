@@ -11,19 +11,19 @@ const SeccionEquipo = () => {
       </p>
       </div>
       <TarjetaMiembroEquipo 
-        imgSrc="imagenes/imagen.gisell.jpg" 
+        imgSrc="imagenes/imagengisell.jpg"
         nombre="Gise" 
         githubLink="https://github.com/Gisell0511" 
         linkedinLink="https://www.linkedin.com/in/gisell-orozco-aa7b94205/" 
       />
       <TarjetaMiembroEquipo 
-        imgSrc="imagenes/imagen.sofia.jpg" 
+        imgSrc="imagenes/imagensofia.jpg" 
         nombre="Sofi" 
         githubLink="https://github.com/Sofiavelasco177" 
         linkedinLink="https://www.linkedin.com/in/sofia-velasco-0470b0333/"
       />
       <TarjetaMiembroEquipo 
-        imgSrc="imagenes/imagen.andrea.jpg" 
+        imgSrc="imagenes/imagenandrea.jpg" 
         nombre="Pau" 
         githubLink="https://github.com/Andrea2147" 
         linkedinLink="https://www.linkedin.com/in/paula-ochoa-5760ab333/" 
