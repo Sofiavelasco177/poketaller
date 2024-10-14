@@ -1,57 +1,57 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import '../Estilos/PaginaAgregar.css'
 import axios from 'axios';
-import './PaginaProductos.css'; 
 
-const PaginaProductos = () => {
-  const [pokemons, setPokemons] = useState([]);
-  const [loading, setLoading] = useState(true);
+const PaginaAgregar = ({ agregarPokemon }) => {
+  const [pokemonName, setPokemonName] = useState('');
   const [error, setError] = useState(null);
+  const [enviado, setEnviado] = useState(false);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
- const fetchPokemonDetails = async (pokemonList) => {
-    const promises = pokemonList.map((pokemon) =>
-      axios.get(pokemon.url).then((res) => res.data)
-    );
-    return Promise.all(promises); 
+    if (!pokemonName) {
+      setError('Por favor, ingresa el nombre del Pokémon');
+      return;
+    }
+
+    setError(null);
+    setEnviado(false); // Reinicia el estado enviado
+
+    try {
+      // Validar si el Pokémon existe
+      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`);
+      
+      // Si la respuesta es exitosa, agrega el Pokémon completo
+      agregarPokemon(response.data);
+      setEnviado(true);
+      setPokemonName(''); // Limpiar el campo del formulario
+
+    } catch (err) {
+      // Manejar el error si el Pokémon no existe
+      setError('Este Pokémon no existe. Por favor, verifica el nombre.');
+    }
   };
 
- 
-  useEffect(() => {
-    const fetchPokemons = async () => {
-      try {
-        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=8');
-        const pokemonDetails = await fetchPokemonDetails(response.data.results);
-        setPokemons(pokemonDetails);
-      } catch (err) {
-        setError('Hubo un problema al cargar los datos');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPokemons();
-  }, []);
-
-
-  if (loading) return <p>Cargando...</p>;
-  if (error) return <p>{error}</p>;
-
   return (
-    <div className="pagina-productos">
-      <h1>Lista de Pokémon</h1>
-      <div className="cards-container">
-        {pokemons.map((pokemon) => (
-          <div key={pokemon.id} className="card">
-            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-            <h3>{pokemon.name}</h3>
-            <p>Altura: {pokemon.height}</p>
-            <p>Peso: {pokemon.weight}</p>
-           
-          </div>
-        ))}
-      </div>
+    <div className="formulario-pokemon">
+      <h1>Formulario de Pokémon</h1>
+      {enviado && <p>Nombre del Pokémon enviado con éxito</p>}
+      <form onSubmit={handleSubmit}>
+        {error && <p className="error">{error}</p>}
+        <div className="form-group">
+          <label htmlFor="pokemonName">Nombre del Pokémon:</label>
+          <input
+            type="text"
+            id="pokemonName"
+            value={pokemonName}
+            onChange={(e) => setPokemonName(e.target.value)}
+          />
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
   );
 };
 
-export default PaginaProductos;
+export default PaginaAgregar;

@@ -3,44 +3,63 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-image: url('../imagenes/background.jpg');
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+.mb-6{
+  color: rgb(54, 54, 54);
+  font-weight: 600;
+}
+
+.container {
+  background-color: #f1d223ce;
+  border-radius: 20px;
 }
 
 h1 {
-  color: #333;
+  color: #c96fd7;
   font-size: 28px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #af4ca8;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #f9f9f9;
+  transform: scale(1.05); /* Efecto sutil al pasar el cursor */
 }
 
 /* Estilos para la navegación */
 nav {
-  background-color: #4caf50;
+  background: linear-gradient(90deg, #f4f7f4, #c781be); /* Degradado suave */
   padding: 15px;
   display: flex;
   justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav button {
   background-color: white;
   color: #4caf50;
-  margin: 0 10px;
   padding: 10px 20px;
+  margin: 0 5px;
   font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav button:hover {
@@ -65,6 +84,7 @@ nav button:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -74,17 +94,18 @@ nav button:hover {
 .team-member-card {
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 20px;
   margin: 15px;
   text-align: center;
   width: 220px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s;
 }
 
 .team-member-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Efecto hover */
 }
 
 .team-member-card img {
@@ -93,22 +114,24 @@ nav button:hover {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
+  border: 2px solid #4caf50; /* Resaltar foto */
 }
 
 .team-member-card p {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
 }
 
 .team-member-card .button {
   background-color: #4caf50;
   color: white;
   padding: 8px 16px;
-  margin: 5px 5px;
+  margin: 5px;
   text-decoration: none;
   border-radius: 5px;
   display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .team-member-card .button:hover {
@@ -119,7 +142,8 @@ nav button:hover {
 .card-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly; /* Mejor distribución */
+  gap: 20px;
   padding: 20px;
 }
 
@@ -131,10 +155,12 @@ nav button:hover {
   width: 220px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Efecto hover */
 }
 
 .card img {
@@ -171,8 +197,8 @@ form label {
 form input[type="text"],
 form input[type="url"] {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 12px;
+  margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
@@ -180,11 +206,12 @@ form input[type="url"] {
 form button {
   background-color: #4caf50;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  transition: background-color 0.3s ease;
 }
 
 form button:hover {
@@ -201,5 +228,10 @@ form button:hover {
 
   .card-list {
     justify-content: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
   }
 }
